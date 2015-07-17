@@ -1,0 +1,105 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Generate Your HalleBot"
+        android:id="@+id/textView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:textColor="@color/purple"/>
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:id="@+id/tableLayout"
+        android:layout_below="@id/textView">
+
+        <TableRow>
+            <TextView
+                android:text="Name:"
+                />
+            <EditText
+                android:id="@+id/name"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:hint="Enter a name"
+                android:gravity="center"
+                android:maxLength="20"/>
+        </TableRow>
+
+        <TableRow>
+            <TextView android:text="Intelligence:" />
+            <EditText
+                android:id="@+id/intelligence"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:enabled="false"/>
+        </TableRow>
+
+        <TableRow>
+            <TextView android:text="Vitality:" />
+            <EditText
+                android:id="@+id/vitality"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:enabled="false"/>
+        </TableRow>
+
+        <TableRow>
+            <TextView android:text="Strength:" />
+            <EditText
+                android:id="@+id/strength"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:enabled="false"/>
+        </TableRow>
+
+        <TableRow>
+            <TextView android:text="Agility:" />
+            <EditText
+                android:id="@+id/agility"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:enabled="false"/>
+        </TableRow>
+
+    </TableLayout>
+
+    <ImageView
+        android:id="@+id/hallebot"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_above="@+id/generate"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/hallebot"
+        android:scaleType="fitCenter"/>
+
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="@string/generate"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/generate"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/button"
+        android:textColor="@color/white" />
+
+
+
+</RelativeLayout>
